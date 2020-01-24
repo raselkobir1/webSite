@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	padding:2px 150px;
+	}
+
+	.content{
+	background-color:powderblue;
+	width:1000px;
+	height:100%;
+	}
+	
+	.header1 { 
+    height:150px;
+	width:1000px;
+	background-color:yellow;
+	text-align:center;
+	margin:0;
+	padding:0;
+        } 
+	h1 {
+	letter-spacing: 4px;
+	padding-top:50px;
+	}
+	
+	.header2{
+	width:1000px;
+	margin:0;
+	padding:0;
+	
+	}
+	.slide{
+	height:400px;
+	width:1000px;
+	background-color:pink;
+	
+	}
+	    /* ---------------left content-----------------*/
+	.leftContent{
+	list-style:none;
+	height:600px;
+	width:200px;
+	background-color:gray;
+	float:left;
+	}
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 12px;
+  width: 200px;
+}
+	li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+	li a:hover {
+  background-color: #555;
+  color: white;
+}
+	
+	 /* ---------------right content----------------*/
+	
+	.rightContent{
+	list-style:none;
+	height:600px;
+	width:800px;
+	background-color:#f5d442;
+	float:left;
+	}
+	p{padding:15px 15px;}
+	 footer { 
+            width: 1000px;         
+            background-color: #000; 
+            color: #fff; 
+            position: absolute; 
+            text-align:center; 
+            font-size:30px; 
+            font-weight:bold; 
+        } 
+
+	  /*-----------------------------------Top menu bar start---------------------------*/
+	.topnav {
+	overflow: hidden;
+	background-color: #333;
+	}
+	.topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 20px 18px;
+	text-decoration: none;
+	font-size: 17px;
+	}
+	.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+	}
+	.login{float:right;}
+
+.foter{
+background-color:#f59342;
+text-align:center;
+}
+/-----------------------------*gallery------------------*/
+.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100px;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 30%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+		
+	</style>
+</head>
+
+<body>
+<div class="content">
+<header> 
+	<div class="header1">
+		<h1>THE NATURAL BEAUTI OF BANGLADESH</h1>
+	</div> <!--heder end-->
+	
+	<div class="header2">
+		<div class="topnav">
+			<a class="active" href="#home">Home</a>
+			<a href="#news">News</a>
+			<a href="#contact">Contact</a>
+			<a href="#about">About</a>
+			<div class="login">
+			<a href="loginPage.html">Login</a>
+			</div>
+		</div>
+			
+	</div> <!--heder2 end-->
+</header> 
+
+<div class="slide">
+<div class="carousel">
+  <img class="mySlides" src="kathbiral.jpg" style="width:1000px; height:400px;">
+  <img class="mySlides" src="lion.jpg" style="width:1000px ; height:400px;">
+  <img class="mySlides" src="naturalTree.jpg" style="width:1000px ; height:400px;">
+</div>
+</div>
+
+<div class="leftContent">
+	<ul>
+		<li><a href="#home">Home</a></li>
+		<li><a href="#news">News</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="#about">About</a></li>
+	</ul>
+</div><!--leftContent end-->
+
+<div class="rightContent">
+<div class="gallery">
+  <a target="_blank" href="gallary/1.jpg">
+    <img src="gallary/1.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="gallary/2.jpg">
+    <img src="gallary/2.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+	
+	
+	
+	
+</div><!--rightContent end-->
+
+
+ <div class="foter">
+  <p>&copy Bangladesh Natural view</p> 
+ </div>
+
+
+</div> <!--content end-->
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>	
+</html>
